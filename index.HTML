@@ -1,0 +1,64 @@
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://extassisnetwork.com/player/Luna/luna.js"></script>
+
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+  }
+
+  #extassisnetwork {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Asegura que la imagen de portada se escale correctamente */
+  #extassisnetwork img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+  }
+
+  @media (max-width: 900px) {
+    #extassisnetwork {
+      padding: 10px;
+    }
+  }
+</style>
+
+<div id="extassisnetwork"></div>
+
+<script>
+  $("#extassisnetwork").lunaradio({
+    streamurl: "https://stream.zeno.fm/5hwumhmuqnhvv",
+    radioname: "CreaSongs",
+    coverimage: "https://i.postimg.cc/50mWtt4H/Radio.jpg",
+    // ESTA ES LA MODIFICACIÓN CLAVE PARA iOS
+    autoplay: "false", 
+    // FIN DE LA MODIFICACIÓN
+    onlycoverimage: false,
+    userinterface: "big",
+    backgroundcolor: "#ffffff",
+    fontcolor: "#000000",
+    hightlightcolor: "#969696",
+    fontname: "Be Vietnam",
+    googlefont: "Be Vietnam",
+    fontratio: "0.4",
+    scroll: "true",
+    coverstyle: "animated",
+    usevisualizer: "real",
+    visualizertype: "6",
+    streamtype: "shoutcast2",
+    shoutcastpath: "/stream",
+    shoutcastid: "1",
+    metadatainterval: "5000",
+    volume: "100",
+    usestreamcorsproxy: "true",
+  });
+</script>
